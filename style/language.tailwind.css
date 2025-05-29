@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+main {
+  @apply max-w-4xl m-auto my-8;
+}
+
+aside {
+  @apply fixed left-0 top-0 h-dvh px-4 py-6 overflow-y-auto;
+}
+
+aside > nav {
+  @apply w-fit;
+}
+
+aside > nav > h3 {
+  @apply font-bold text-xl text-[var(--color-primary)] mb-4;
+}
+
+aside > nav li {
+  @apply ml-4;
+}
+
+aside > nav > ol > li ~ li {
+  @apply mt-2;
+}
+
+aside > nav a::after {
+  @apply ml-1 text-transparent content-["§"];
+}
+
+aside > nav a:hover::after {
+  @apply text-white;
+}

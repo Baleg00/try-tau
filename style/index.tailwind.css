@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+main {
+  @apply max-w-4xl m-auto my-8;
+}
+
+#hero {
+  @apply mb-24 flex flex-row justify-between;
+}
+
+#hero > .banner {
+  @apply flex flex-col items-center;
+}
+
+#hero > .banner > img {
+  @apply h-[8rem];
+}
+
+#hero > .banner > h3 {
+  @apply text-lg;
+}
+
+#hero > ul {
+  @apply flex flex-col justify-center space-y-2 text-center text-lg;
+}
+
+#hero > ul > li > a {
+  @apply block bg-[var(--color-secondary)] px-4 py-2 hover:bg-[var(--color-primary)];
+}
+
+#features {
+  @apply my-24;
+}
+
+#features > h2 {
+  @apply text-center font-bold text-4xl mb-8;
+}
+
+#features > .feature-grid {
+  @apply grid grid-cols-2 gap-y-12 gap-x-16;
+}
+
+#features > .feature-grid > .feature-item {
+  @apply p-4 hover:bg-[var(--color-light)];
+}
+
+#features > .feature-grid > .feature-item > h3 {
+  @apply text-center font-bold text-xl mb-4;
+}
+
+#features > .feature-grid > .feature-item > p {
+  @apply text-justify text-sm;
+}

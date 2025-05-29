@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <base href="/">
+
+    <title>Download - The Tau Programming Language</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/download.css">
+
+    <!-- Custom -->
+    <script src="script/include-html.js"></script>
+</head>
+<body>
+    <include href="nav.inc.html"></include>
+
+    <main>
+        <h1>Latest Releases</h1>
+
+        <table class="w-full p-2 border-separate border-spacing-2 border text-center">
+            <thead>
+                <tr>
+                    <th>Platform</th>
+                    <th>Architecture</th>
+                    <th>Link</th>
+                    <th>Signature</th>
+                    <th>Size</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="border-b" rowspan="3">Windows</td>
+                    <td>x64</td>
+                    <td><a class="link" href="#">tau-windows-x64-0.0.1+8ddd67b8.zip</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+                <tr>
+                    <td>x86</td>
+                    <td><a class="link" href="#">tau-windows-x86-0.0.1+8ddd67b8.zip</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+                <tr>
+                    <td class="border-b">arm64</td>
+                    <td class="border-b"><a class="link" href="#">tau-windows-arm64-0.0.1+8ddd67b8.zip</a></td>
+                    <td class="border-b"><a class="link" href="#">sig</a></td>
+                    <td class="border-b">50MB</td>
+                </tr>
+                <tr>
+                    <td class="border-b" rowspan="4">Linux</td>
+                    <td>x64</td>
+                    <td><a class="link" href="#">tau-linux-x64-0.0.1+8ddd67b8.tar.gz</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+                <tr>
+                    <td>x86</td>
+                    <td><a class="link" href="#">tau-linux-x86-0.0.1+8ddd67b8.tar.gz</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+                <tr>
+                    <td>x86_64</td>
+                    <td><a class="link" href="#">tau-linux-x86_64-0.0.1+8ddd67b8.tar.gz</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+                <tr>
+                    <td class="border-b">arm64</td>
+                    <td class="border-b"><a class="link" href="#">tau-linux-arm64-0.0.1+8ddd67b8.tar.gz</a></td>
+                    <td class="border-b"><a class="link" href="#">sig</a></td>
+                    <td class="border-b">50MB</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">macOS</td>
+                    <td>x86_64</td>
+                    <td><a class="link" href="#">tau-macos-x86_64-0.0.1+8ddd67b8.tar.gz</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+                <tr>
+                    <td>arm64</td>
+                    <td><a class="link" href="#">tau-macos-arm64-0.0.1+8ddd67b8.tar.gz</a></td>
+                    <td><a class="link" href="#">sig</a></td>
+                    <td>50MB</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h1>Older Releases</h1>
+    </main>
+
+    <include href="footer.inc.html"></include>
+</body>
+</html>

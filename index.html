@@ -3,79 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <base href="/">
 
     <title>The Tau Programming Language</title>
 
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
 
-    <style type="text/tailwindcss">
-        @theme {
-            --font-mono: "Source Code Pro", monospace;
-            --color-white: #F7F7F8;
-            --color-dark: #180161;
-            --color-light: #4F1787;
-            --color-primary: #FB773C;
-            --color-secondary: #EB3678;
-        }        
-    </style>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
-<body class="bg-dark text-white font-mono">
-    <nav class="px-8 py-2 flex flex-row justify-between items-center">
-        <span class="font-bold text-4xl text-primary">&tau;&alpha;&upsilon;</span>
-        <ul class="flex flex-row space-x-6">
-            <li><a href="#">&#127968;Home</a></li>
-            <li><a href="#">&#128269;Learn</a></li>
-            <li><a href="#">&#128218;Docs</a></li>
-            <li><a href="#">&#128212;Blog</a></li>
-            <li><a href="#">&#127757;Community</a></li>
-        </ul>
-    </nav>
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="style/base.css">
+    <link rel="stylesheet" href="style/index.css">
 
-    <main class="w-2/3 m-auto my-8">
-        <div id="hero" class="mb-24 flex flex-row justify-between">
-            <div class="flex flex-col items-center">
-                <img class="h-[8rem]" src="img/logo.svg">
+    <!-- Custom -->
+    <script src="script/include-html.js"></script>
+</head>
+<body>
+    <include href="nav.inc.html"></include>
+
+    <main>
+        <div id="hero">
+            <div class="banner">
+                <img src="img/logo.svg">
                 <h3>A <u>clean</u> and <u>consistent</u> programming language.</h3>
             </div>
-            <div class="flex flex-col justify-center space-y-2 text-center text-lg">
-                <a class="bg-secondary px-4 py-2 hover:bg-primary" href="#">&#128640; Get Started</a>
-                <a class="bg-secondary px-4 py-2 hover:bg-primary" href="#">&#128187; View on GitHub</a>
-                <a class="bg-secondary px-4 py-2 hover:bg-primary" href="#">&#129514; Try It Online</a>
-            </div>
+            <ul>
+                <li><a class="cta-item" href="#get-started">🚀 Get Started</a></li>
+                <li><a class="cta-item" href="https://github.com/Baleg00/tau-lang" target="_blank">💻 View on GitHub</a></li>
+                <li><a class="cta-item" href="#">🧪 Try It Online</a></li>
+            </ul>
         </div>
 
-        <div id="features" class="my-24">
-            <h2 class="text-center font-bold text-4xl mb-8">Why Tau?</h2>
-            <div class="px-12 grid grid-cols-2 gap-y-12 gap-x-16">
-                <div class="p-4 hover:bg-light">
-                    <h3 class="text-center font-bold text-xl mb-4">&#129504; Familiar Syntax</h3>
-                    <p class="text-justify text-sm">Tau uses a syntax that feels natural to seasoned programmers. This makes the language approachable, minimizing the learning curve and allowing you to focus on what makes Tau unique.</p>
+        <div id="features">
+            <h2>Why Tau?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>&#129504; Familiar Syntax</h3>
+                    <p>Tau uses a syntax that feels natural to seasoned programmers. This makes the language approachable, minimizing the learning curve and allowing you to focus on what makes Tau unique.</p>
                 </div>
-                <div class="p-4 hover:bg-light">
-                    <h3 class="text-center font-bold text-xl mb-4">&#128279; Interoperability</h3>
-                    <p class="text-justify text-sm">Seamlessly interface with C libraries and code. Tau's ABI compatibility with C means you can reuse existing libraries without wrappers or bindings, making integration smooth and efficient.</p>
+                <div class="feature-item">
+                    <h3>&#128279; Interoperability</h3>
+                    <p>Seamlessly interface with C libraries and code. Tau's ABI compatibility with C means you can reuse existing libraries without wrappers or bindings, making integration smooth and efficient.</p>
                 </div>
-                <div class="p-4 hover:bg-light">
-                    <h3 class="text-center font-bold text-xl mb-4">&#9881; Low-Level Control</h3>
-                    <p class="text-justify text-sm">Tau gives you precise control over memory and system resources. You can manage allocation manually, work with raw pointers, and write performant code with no overhead.</p>
+                <div class="feature-item">
+                    <h3>&#9881; Low-Level Control</h3>
+                    <p>Tau gives you precise control over memory and system resources. You can manage allocation manually, work with raw pointers, and write performant code with no overhead.</p>
                 </div>
-                <div class="p-4 hover:bg-light">
-                    <h3 class="text-center font-bold text-xl mb-4">&#10024; High-Level Constructs</h3>
-                    <p class="text-justify text-sm">While close to the metal, Tau also supports high-level abstractions such as generics, interfaces and generators, enabling expressive code without sacrificing performance.</p>
+                <div class="feature-item">
+                    <h3>&#10024; High-Level Constructs</h3>
+                    <p>While close to the metal, Tau also supports high-level abstractions such as generics, interfaces and generators, enabling expressive code without sacrificing performance.</p>
                 </div>
-                <div class="p-4 hover:bg-light">
-                    <h3 class="text-center font-bold text-xl mb-4">&#129516; Metaprogramming</h3>
-                    <p class="text-justify text-sm">Tau includes compile-time metaprogramming tools that let you write code that writes code. Generate functions, types, and logic based on static input to reduce repetition and increase flexibility.</p>
+                <div class="feature-item">
+                    <h3>&#129516; Metaprogramming</h3>
+                    <p>Tau includes compile-time metaprogramming tools that let you write code that writes code. Generate functions, types, and logic based on static input to reduce repetition and increase flexibility.</p>
                 </div>
-                <div class="p-4 hover:bg-light">
-                    <h3 class="text-center font-bold text-xl mb-4">&#128230; Module System</h3>
-                    <p class="text-justify text-sm">Tau's module system is simple and file-based. Organize code naturally using folders and files without complex package managers, making it easy to structure and navigate your projects.</p>
+                <div class="feature-item">
+                    <h3>&#128230; Module System</h3>
+                    <p>Tau's module system is simple and file-based. Organize code naturally using folders and files without complex package managers, making it easy to structure and navigate your projects.</p>
                 </div>
             </div>
         </div>
@@ -86,8 +74,6 @@
         </div>
     </main>
 
-    <footer class="p-4 flex flex-row justify-center">
-        <span class="text-secondary">&copy; 2025 The Tau Programming Language. All Rights Reserved.</span>
-    </footer>
+    <include href="footer.inc.html"></include>
 </body>
 </html>

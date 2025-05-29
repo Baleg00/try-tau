@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+main {
+  @apply max-w-4xl m-auto my-8;
+}
+
+main > h1 {
+  @apply text-center text-3xl font-bold mb-5 mt-8;
+}
+
+main > table {
+  @apply w-full p-2 border-separate border-spacing-2 border text-center;
+}
+
+main > table th {
+  @apply border-b;
+}

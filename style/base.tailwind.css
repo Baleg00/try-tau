@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-mono: "Source Code Pro", monospace;
+  --color-white: #F7F7F8;
+  --color-dark: #180161;
+  --color-light: #4F1787;
+  --color-primary: #FB773C;
+  --color-secondary: #EB3678;
+}
+
+.link {
+  @apply text-secondary underline;
+}
+
+body {
+  @apply bg-dark text-white font-mono;
+}
+
+body > nav {
+  @apply px-8 py-2 flex flex-row justify-between items-center;
+}
+
+body > nav > h2 {
+  @apply font-bold text-4xl text-primary;
+}
+
+body > nav > ul {
+  @apply flex flex-row space-x-6;
+}
+
+body > nav > ul > li {
+  @apply hover:underline;
+}
+
+body > footer {
+  @apply p-4 flex flex-row justify-center text-secondary;
+}
